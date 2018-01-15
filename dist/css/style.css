@@ -538,7 +538,7 @@ img {
 
 .nav-box__item {
   font-family: "Open Sans", sans-serif;
-  padding: 0 15px;
+  padding: 0 5px;
   border-bottom: solid 2px transparent;
 }
 
@@ -1014,6 +1014,9 @@ footer{
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .nav-box__item {
+    padding: 0 15px;
   }
   .top-header {
     display: -ms-flexbox;
