@@ -25,7 +25,7 @@ toggleMenu.click(function(){
     if(navMenu.is(':hidden')) {
         h = navMenu.show().height();
             navMenu.css('height', 0);
-            navMenu.animate({'height': h}, 500,
+            navMenu.animate({'height': h}, 400,
                 function(){
                 $this.addClass('active');
                 });
