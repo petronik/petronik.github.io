@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body id="app">
-<header>
-    <div class="logo-box flex">Cuda</div>
+<body >
+<header id="app">
+    <div class="logo-box flex">{{ message }}</div>
 
     <nav class="nav">
         <h2 class="headtitle">Menu</h2>
         <div id="toggle-menu" data-toggle="#nav-menu" class="toggle-menu">
             <span></span><span></span><span></span>
         </div>
-        <div  id="nav-menu" class="nav-menu flex">
+        <div  id="nav-menu" class="nav-menu">
             <div class="nav-item"><a class="nav-link" href="">home</a></div>
             <div class="nav-item"><a class="nav-link" href="#services">about</a></div>
             <div class="nav-item"><a class="nav-link" href="#team">work</a></div>
@@ -40,13 +40,14 @@
 </header><!--HEADER-->
 
 
-<!--
+
 
 <div id="services" class="services">
-    <div class="services__title flex">services we provide</div>
-    <div class="services__content">
-        We are working with both individuals and businesses from all over the globe
+    <div class="services__box flex">
+        <h1>services we provide</h1>
+        <p>We are working with both individuals and businesses from all over the globe
         to create awesome websites and applications.
+        </p>
     </div>
     <div class="services__article flex">
         <article class="services__article_item">
@@ -70,7 +71,10 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </article>
     </div>
-</div>&lt;!&ndash;SERVICES&ndash;&gt;
+</div>
+<!--services-->
+
+<!--
 <div id="#team" class="team">
     <div class="team__topbox flex">
         <div class="h1"><h1>meet our beautifull team</h1></div>
@@ -249,8 +253,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
+<script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
 
-<script>
+<!--<script>
     var c2 = $('.second.circle');
     c2.circleProgress({
         startAngle: 4.7123889804,
@@ -259,14 +264,22 @@
         fill: {color: '#ffa500'}
     });
 
-</script>
+</script>-->
 <script>
-    new SmoothScroll('a[href*="#"]',{
-        speed: 3000});
-   /* var a = 2;
-    var d = 3
-    console.log(a + d);*/
+    new Vue({
+        el: '#app',
+        data:{
+            message: 'Cuda',
+
+        }
+
+
+
+    })
+
 
 </script>
+
+<script src="js/script.js"></script>
 </body>
 </html>
