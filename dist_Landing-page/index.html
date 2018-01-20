@@ -13,19 +13,20 @@
 <header id="app">
     <div class="logo-box flex">{{ message }}</div>
 
-    <nav class="nav">
+    <nav v-show="showMenu" class="nav">
         <h2 class="headtitle">Menu</h2>
-        <div id="toggle-menu" data-toggle="#nav-menu" class="toggle-menu">
-            <span></span><span></span><span></span>
-        </div>
-        <div  id="nav-menu" class="nav-menu flex">
-            <div class="nav-item"><a class="nav-link" href="">home</a></div>
-            <div class="nav-item"><a class="nav-link" href="#services">about</a></div>
-            <div class="nav-item"><a class="nav-link" href="#team">work</a></div>
-            <div class="nav-item"><a class="nav-link" href="#team">blog</a></div>
-            <div class="nav-item"><a class="nav-link" href="">contact</a></div>
-        </div>
+
+        <ul>
+            <li class="nav-item"><a class="nav-link" href="#app">home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">about</a></li>
+            <li class="nav-item"><a class="nav-link" href="#work">work</a></li>
+            <li class="nav-item"><a class="nav-link" href="#team">blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="">contact</a></li>
+        </ul>
     </nav>
+    <nav v-show="!showMenu"></nav>
+    <button type="button" class="btn showButton" v-on:cilck=" showMenu = !showMenu">Menu
+    </button>
 
     <div class="content">
         <p>Hi there! We are the new kids on the block
@@ -33,7 +34,7 @@
         </p>
     </div>
     <div class="buttn">
-        <a class="btn buttn__item" href="#">work with us!</a>
+        <a class="btn buttn__item" href="#work">work with us!</a>
     </div>
 
 
@@ -43,10 +44,11 @@
 
 
 <div id="services" class="services">
-    <div class="services__title flex">services we provide</div>
-    <div class="services__content">
-        We are working with both individuals and businesses from all over the globe
+    <div class="services__box flex">
+        <h1>services we provide</h1>
+        <p>We are working with both individuals and businesses from all over the globe
         to create awesome websites and applications.
+        </p>
     </div>
     <div class="services__article flex">
         <article class="services__article_item">
@@ -73,15 +75,15 @@
 </div>
 <!--services-->
 
-<!--
+
 <div id="#team" class="team">
     <div class="team__topbox flex">
         <div class="h1"><h1>meet our beautifull team</h1></div>
         <p>We are a small team of designers and developers, who help brands with big ideas.
         </p>
     </div>
-    <div class="team__content flex">
-        <article class="team__content_article">
+
+        <article class="team__article article-1">
             <div class="img"><img src="i/person5.png"></div>
             <h2>anne hathaway</h2>
             <h3>CEO / Marketing Guru</h3>
@@ -96,7 +98,7 @@
 
             </div>
         </article>
-        <article class="team__content_article">
+        <article class="team__article article-2">
             <div class="img"><img src="i/person7.png"></div>
             <h2>kate upton</h2>
             <h3>Creative Director</h3>
@@ -109,7 +111,7 @@
                 <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
             </div>
         </article>
-        <article class="team__content_article">
+        <article class="team__article article-3">
             <div class="img"><img src="i/person9.png"></div>
             <h2>olivia wilde</h2>
             <h3>Lead Designer</h3>
@@ -123,7 +125,7 @@
                 <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
             </div>
         </article>
-        <article class="team__content_article">
+        <article class="team__article article-4">
             <div class="img"><img src="i/person10.png"></div>
             <h2>ashlie greene</h2>
             <h3>SEO / Developer</h3>
@@ -136,48 +138,26 @@
                 <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
             </div>
         </article>
-    </div>
-</div>&lt;!&ndash;TEAM&ndash;&gt;
-<div class="progressbar">
-    <div class="progressbar__header">
-        <h1>we got skills!</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt dolor dolore in molestias odit,
-            quas qui rerum? Explicabo, nemo.</p>
-    </div>
-    <div class="progressbar__box">
-        <div class="progressbar__box_item">
-            <div class="second circle"></div>
-            <p class="name">web design</p>
-        </div>
-        <div class="progressbar__box_item">
-            <div class="circle2"></div>
-            <p class="name">html / css</p>
-        </div>
-        <div class="progressbar__box_item">
-            <div class="circle3"></div>
-            <p class="name">graphic design</p>
-        </div>
-        <div class="progressbar__box_item">
-            <div class="circle4"></div>
-            <p class="name">ux / ui</p>
-        </div>
-    </div>
-</div>&lt;!&ndash;progressbar&ndash;&gt;
-<div class="portfolio">
+
+</div>
+
+<!--TEAM-->
+
+<div id="work" class="portfolio">
     <div class="portfolio__header">
         <h1>our portfolio</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur exercitationem nam natus
             tempora. Aliquid atque consequuntur eaque repellat tempore!</p>
     </div>
     <nav class="navbar">
-        <button data-filter=".all" class="navbar-item">all</button>
-        <button data-filter=".web" class="navbar-item">web</button>
-        <button data-filter=".apps" class="navbar-item">apps</button>
-        <button data-filter=".icons" class="navbar-item">icons</button>
+        <button data-filter=".all" class="navbar__item">all</button>
+        <button data-filter=".web" class="navbar__item">web</button>
+        <button data-filter=".apps" class="navbar__item">apps</button>
+        <button data-filter=".icons" class="navbar__item">icons</button>
     </nav>
     <div class="gallery">
         <div class="gallery-box">
-            <article class="all web">
+            <article class="article all web">
                 <a href="i/1.png">
                     <figure>
                         <img src="i/1.png" alt="photo">
@@ -185,7 +165,7 @@
                 </a>
                 <p>isometric perspective moc-up</p>
             </article>
-            <article class="all apps">
+            <article class="article all apps">
                 <a href="i/2.png">
                     <figure>
                         <img src="i/2.png" alt="photo">
@@ -193,7 +173,7 @@
                 </a>
                 <p>time zone app ui</p>
             </article>
-            <article class="all web">
+            <article class="article all web">
                 <a href="i/3.png">
                     <figure>
                         <img src="i/3.png" alt="photo">
@@ -201,7 +181,7 @@
                 </a>
                 <p>viro media players ui</p>
             </article>
-            <article class="all web">
+            <article class="article all web">
                 <a href="i/4.png">
                     <figure>
                         <img src="i/4.png" alt="photo">
@@ -209,75 +189,64 @@
                 </a>
                 <p>blog / magazine flat ui kit</p>
             </article>
-            <article class="all apps">
-                <a href="i/1.png">
-                    <figure>
-                        <img src="i/1.png" alt="photo">
-                    </figure>
-                </a>
-                <p>isometric perspective moc-up</p>
-            </article>
-            <article class="all icons">
-                <a href="i/2.png">
-                    <figure>
-                        <img src="i/2.png" alt="photo">
-                    </figure>
-                </a>
-                <p>viro media players ui</p>
-            </article>
-            <article class="all icons">
-                <a href="i/3.png">
-                    <figure>
-                        <img src="i/3.png" alt="photo">
-                    </figure>
-                </a>
-                <p>isometric perspective moc-up</p>
-            </article>
-            <article class="all apps">
-                <a href="i/4.png">
-                    <figure>
-                        <img src="i/4.png" alt="photo">
-                    </figure>
-                </a>
-                <p>time zone app ui</p>
-            </article>
-        </div>&lt;!&ndash;gallery-box&ndash;&gt;
-        <button class="btn">load more projects</button>
-    </div>&lt;!&ndash;gallery&ndash;&gt;
 
-</div>&lt;!&ndash;portfolio&ndash;&gt;
--->
+                <article class="loadMore article all apps">
+                    <a href="i/1.png">
+                        <figure>
+                            <img src="i/1.png" alt="photo">
+                        </figure>
+                    </a>
+                    <p>isometric perspective moc-up</p>
+                </article>
+                <article class="loadMore article all icons">
+                    <a href="i/2.png">
+                        <figure>
+                            <img src="i/2.png" alt="photo">
+                        </figure>
+                    </a>
+                    <p>viro media players ui</p>
+                </article>
+                <article class="loadMore article all icons">
+                    <a href="i/3.png">
+                        <figure>
+                            <img src="i/3.png" alt="photo">
+                        </figure>
+                    </a>
+                    <p>isometric perspective moc-up</p>
+                </article>
+                <article class="loadMore article all apps">
+                    <a href="i/4.png">
+                        <figure>
+                            <img src="i/4.png" alt="photo">
+                        </figure>
+                    </a>
+                    <p>time zone app ui</p>
+                </article>
+
+        </div><!--gallery-box-->
+        <button v-on:click="clickedButton('Hello World!', $event)" id="item" class="gallery__button"><p>load projects</p></button>
+    </div>
+
+</div>
+
+<div class="blog">
+    <div class="blog__header">
+        <h1 class="blog__header_title">what people say about us</h1>
+        <p>our clients love us!</p>
+
+    </div>
+    <div class="comments"></div>
+</div><!--BLOG-->
 
 
 
+<script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
-<script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
-
-<!--<script>
-    var c2 = $('.second.circle');
-    c2.circleProgress({
-        startAngle: 4.7123889804,
-        value: 0.7,
-        lineCap: 'round',
-        fill: {color: '#ffa500'}
-    });
-
-</script>-->
-<script>
-    new Vue({
-        el: '#app',
-        data:{
-            message: 'Cuda'
-        }
 
 
 
-    })
 
-
-</script>
-
-
+<script src="js/script.js"></script>
 </body>
 </html>
