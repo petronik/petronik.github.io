@@ -23,7 +23,7 @@ var e;t?(t=n.makeArray(t),e=this.getItems(t)):e=this.items,this._getSorters(),th
 
 /*----------SmoothScroll-------------*/
 new SmoothScroll('a[href*="#"]',{
-    speed: 1000});
+    speed: 1});
 
 /*---------END SmoothScroll-------------*/
 
@@ -32,7 +32,8 @@ new Vue({
     el: '#app',
     data:{
         message: 'Cuda',
-        showMenu: true
+        showMenu: false
+
     },
     method:{
         clickedButton: function(message, event) {
@@ -42,6 +43,19 @@ new Vue({
     }
 
 });
+new Vue({
+    el: '#app2',
+    data:{
+        facebook:'http://facebook.com',
+        twitter:'http://twitter.com',
+        google:'http://google+.com',
+        linkedin:'http://linkedIn.com',
+        behance:'http://behance.com',
+        dribble:'http://dribble.com',
+        github:'http://github.com',
+
+    }
+})
 /*----------------PROGRESS BAR----------*/
 
 
@@ -54,9 +68,19 @@ c2.circleProgress({
 });*/
 
 /*---------------- END PROGRESS BAR----------*/
-$("#item").click(function () {
-    $(".loadMore").slideToggle("slow");
-    $("#item p").text("Hide");
+
+const btnItem = $("#item");
+const hideBox = $("#hide-box")
+btnItem.click(function () {
+    const $this = $(this);
+    hideBox.slideToggle("slow", function () {
+        if(hideBox.is(":hidden")) {
+            $this.text("Load More");
+        } else {
+            $this.text("Hide");
+        }
+
+    });
 
 });
 /*
@@ -72,8 +96,8 @@ $("#item").click(function () {
 $('.navbar__item').click(function () {
     const $this = $(this);
     const cls = $this.data('filter');
-    $('.article').hide(500);
-    $(cls).show(500);
+    $('.article').hide(300);
+    $(cls).show(300);
 });
 
 
@@ -84,4 +108,20 @@ $.ajax({
     method: 'GET'
 }).then(function(data) {
     console.log(data);
+});
+$(function () {
+    var btn = $("#hide");
+   $(btn).hide();
+   $('textarea').on("keydown", function () {
+       var val = $('textarea').val();
+       if(val !== ''){
+           $(btn).show();
+       } else {
+           $(btn).hide();
+       }
+   })
+   // var val = $("input").val();
+   // if(val !== ''){
+     //   $(btn).show();}
+
 });

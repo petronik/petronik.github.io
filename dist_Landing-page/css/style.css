@@ -383,8 +383,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* height: 100%;
-  width: 100%;*/
 }
 
 .headtitle {
@@ -439,9 +437,14 @@ li {
 
 .showButton {
   position: fixed;
-  right: 50px;
+  background-color: #87509c;
+  right: 10px;
   top: 30px;
-  color: #9aa5aa;
+  color: #ffffff;
+  z-index: 10;
+  line-height: 25px;
+  padding: 0 10px;
+  border-radius: 5px;
 }
 
 .nav-link {
@@ -901,13 +904,89 @@ figure img {
   padding: 20px 0;
 }
 
+.contacts {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #3c5499;
+  text-align: center;
+  color: #ffffff;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts__header h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  position: relative;
+  padding: 20px 0;
+}
+
+.contacts__header h1:after {
+  position: absolute;
+  content: '';
+  width: 90px;
+  height: 4px;
+  background: #273a71;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.contacts__header p {
+  padding: 20px;
+}
+
+.inputField {
+  background: #273a71;
+  line-height: 1.875rem;
+  color: #ffffff;
+  margin: 10px;
+  border-radius: 5px;
+  text-indent: 10px;
+}
+
+.btnSubmit {
+  text-transform: uppercase;
+  padding-right: 10px;
+}
+
+/*
+.hide{
+  display: none;
+}*/
+.footer {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #ffffff;
+  background-color: #344b8e;
+  border-top: solid #3c5499 2px;
+  text-align: center;
+  padding: 0 100px;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 20px;
+}
+
+.footer a:hover {
+  color: #30bae7;
+}
+
 @media only screen and (min-width: 768px) {
-  .showButton {
-    display: none;
-  }
-  .nav > style {
-    display: block;
-  }
+  /*.nav>style{
+  display: block;
+}*/
   .nav {
     max-width: 100%;
   }
@@ -991,7 +1070,6 @@ figure img {
     max-width: 540px;
   }
   .gallery-box {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
   }
@@ -1033,14 +1111,15 @@ figure img {
             align-items: end;
     font-size: 2.5rem;
   }
-  .nav {
-    position: static;
-    grid-column: 5/13;
-    grid-row: 1/2;
-    margin: auto;
-    right: 0;
-    top: 40px;
-  }
+  /*.nav {
+  position: static;
+
+  grid-column: 5/13;
+  grid-row: 1/2;
+  margin: auto;
+  right: 0;
+  top: 40px;
+}*/
   .nav-link {
     font-size: 1.25rem;
     padding: 0 10px;

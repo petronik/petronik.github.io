@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
 	<title>LANDING PAGE</title>
 	<meta charset="UTF-8">
@@ -20,12 +20,11 @@
             <li class="nav-item"><a class="nav-link" href="#app">home</a></li>
             <li class="nav-item"><a class="nav-link" href="#services">about</a></li>
             <li class="nav-item"><a class="nav-link" href="#work">work</a></li>
-            <li class="nav-item"><a class="nav-link" href="#team">blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="">contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#blog">blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacts">contact</a></li>
         </ul>
     </nav>
-    <nav v-show="!showMenu"></nav>
-    <button type="button" class="btn showButton" v-on:cilck=" showMenu = !showMenu">Menu
+    <button class="showButton" @click="showMenu = !showMenu">Menu
     </button>
 
     <div class="content">
@@ -189,8 +188,9 @@
                 </a>
                 <p>blog / magazine flat ui kit</p>
             </article>
-
-                <article class="loadMore article all apps">
+        </div>
+        <div class="gallery-box" id="hide-box">
+            <article class="loadMore article all apps">
                     <a href="i/1.png">
                         <figure>
                             <img src="i/1.png" alt="photo">
@@ -198,7 +198,7 @@
                     </a>
                     <p>isometric perspective moc-up</p>
                 </article>
-                <article class="loadMore article all icons">
+            <article class="loadMore article all icons">
                     <a href="i/2.png">
                         <figure>
                             <img src="i/2.png" alt="photo">
@@ -206,7 +206,7 @@
                     </a>
                     <p>viro media players ui</p>
                 </article>
-                <article class="loadMore article all icons">
+            <article class="loadMore article all icons">
                     <a href="i/3.png">
                         <figure>
                             <img src="i/3.png" alt="photo">
@@ -214,7 +214,7 @@
                     </a>
                     <p>isometric perspective moc-up</p>
                 </article>
-                <article class="loadMore article all apps">
+            <article class="loadMore article all apps">
                     <a href="i/4.png">
                         <figure>
                             <img src="i/4.png" alt="photo">
@@ -224,19 +224,44 @@
                 </article>
 
         </div><!--gallery-box-->
-        <button v-on:click="clickedButton('Hello World!', $event)" id="item" class="gallery__button"><p>load projects</p></button>
+        <button id="item" class="gallery__button">load projects</button>
     </div>
 
 </div>
 
-<div class="blog">
+<div id="blog" class="blog">
     <div class="blog__header">
         <h1 class="blog__header_title">what people say about us</h1>
         <p>our clients love us!</p>
 
     </div>
-    <div class="comments"></div>
+    <div class="container"></div>
 </div><!--BLOG-->
+<div id="contacts" class="contacts flex">
+    <div class="contacts__header">
+        <h1>get in touch</h1>
+        <p>1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111
+        </p>
+    </div>
+    <form action="#">
+        <div class="name">
+            <input class="inputField" type="text" placeholder="Your Name" required>
+            <input class="inputField" type="email" placeholder="Your Email" required>
+        </div>
+        <textarea class="inputField" placeholder="Your message" required minlength="30" maxlength="100" cols="30" rows="5"></textarea>
+        <br>
+        <button id="hide" class="inputField btnSubmit" type="submit" value="submit">submit</button>
+    </form>
+</div>
+<footer class="footer flex" id="app2">
+    <a target="_blank" v-bind:href="facebook">Facebook</a>
+    <a target="_blank" v-bind:href="twitter">Twitter</a>
+    <a target="_blank" v-bind:href="google">Google+</a>
+    <a target="_blank" v-bind:href="linkedin">LinkedIn</a>
+    <a target="_blank" v-bind:href="behance">Behance</a>
+    <a target="_blank" v-bind:href="dribble">Dribble</a>
+    <a target="_blank" v-bind:href="github">GitHub</a>
+</footer>
 
 
 
