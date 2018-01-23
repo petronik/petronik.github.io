@@ -43,19 +43,7 @@ new Vue({
     }
 
 });
-new Vue({
-    el: '#app2',
-    data:{
-        facebook:'http://facebook.com',
-        twitter:'http://twitter.com',
-        google:'http://google+.com',
-        linkedin:'http://linkedIn.com',
-        behance:'http://behance.com',
-        dribble:'http://dribble.com',
-        github:'http://github.com',
 
-    }
-})
 /*----------------PROGRESS BAR----------*/
 
 
@@ -101,27 +89,50 @@ $('.navbar__item').click(function () {
 });
 
 
-var root = 'https://jsonplaceholder.typicode.com';
+/*var root = 'https://jsonplaceholder.typicode.com';
 
 $.ajax({
     url: root + '/posts/',
     method: 'GET'
 }).then(function(data) {
-    console.log(data);
-});
+    document.html(data);
+});*/
+
+/*--------------------------------------------------------*/
+
 $(function () {
     var btn = $("#hide");
    $(btn).hide();
-   $('textarea').on("keydown", function () {
-       var val = $('textarea').val();
+   $('.inputField').on("keydown", function () {
+       var val = $('.inputField').val();
        if(val !== ''){
            $(btn).show();
        } else {
            $(btn).hide();
        }
    })
-   // var val = $("input").val();
-   // if(val !== ''){
-     //   $(btn).show();}
-
 });
+
+$(document).ready(function () {
+    $(".inputField").focus(function () {
+        $(this).css("background-color","#cccccc");
+    });
+    $(".inputField").blur(function () {
+        $(this).css("background-color","#273a71");
+    });
+})
+/*------------------------------------------------*/
+window.onscroll = function () {scrollFunction()};
+function scrollFunction() {
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+        {document.getElementById("topBtn").style.display = "block";
+        } else {
+        document.getElementById("topBtn").style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+/*--------------------------------------------------*/
