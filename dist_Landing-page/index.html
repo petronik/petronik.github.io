@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:v-on="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 	<title>LANDING PAGE</title>
 	<meta charset="UTF-8">
@@ -10,25 +10,26 @@
 
 </head>
 <body >
+<div id="myNav" class="overlay">
+    <!--<h2 class="headtitle">Menu</h2>-->
+    <a href="#" class="closebtn">&times;</a>
+
+    <div class="overlay-content">
+        <a href="#app">home</a>
+        <a href="#services">about</a>
+        <a href="#work">work</a>
+        <a href="#blog">blog</a>
+        <a href="#contacts">contact</a>
+    </div>
+</div>
 <header id="app">
-    <div class="logo-box flex">{{ message }}</div>
+    <div class="logo-box flex">Cuda</div>
 
-    <nav v-show="showMenu" class="nav">
-        <h2 class="headtitle">Menu</h2>
 
-        <ul>
-            <li class="nav-item"><a class="nav-link" href="#app">home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#services">about</a></li>
-            <li class="nav-item"><a class="nav-link" href="#work">work</a></li>
-            <li class="nav-item"><a class="nav-link" href="#blog">blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contacts">contact</a></li>
-        </ul>
-    </nav>
-    <button class="showButton" @click="showMenu = !showMenu">Menu
-    </button>
+    <button class="showButton">&#9776; Menu</button>
 
-    <div class="content">
-        <p>Hi there! We are the new kids on the block
+    <div id="text" class="content flex">
+        <p >Hi there! We are the new kids on the block
             and we build awesome websites and mobile apps.
         </p>
     </div>
@@ -224,7 +225,7 @@
                 </article>
 
         </div><!--gallery-box-->
-        <a class="gallery__button" href="#work"><button id="item" class="gallery__button">load projects</button></a>
+        <a class="gallery__button" href="#work"><button id="item" class="gallery__button">load more</button></a>
     </div>
 
 </div>

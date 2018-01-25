@@ -23,26 +23,11 @@ var e;t?(t=n.makeArray(t),e=this.getItems(t)):e=this.items,this._getSorters(),th
 
 /*----------SmoothScroll-------------*/
 new SmoothScroll('a[href*="#"]',{
-    speed: 1});
+    speed: 300});
 
 /*---------END SmoothScroll-------------*/
 
 
-new Vue({
-    el: '#app',
-    data:{
-        message: 'Cuda',
-        showMenu: false
-
-    },
-    method:{
-        clickedButton: function(message, event) {
-            console.log(event),
-            alert(message);
-        },
-    }
-
-});
 
 /*----------------PROGRESS BAR----------*/
 
@@ -58,8 +43,9 @@ c2.circleProgress({
 /*---------------- END PROGRESS BAR----------*/
 
 const btnItem = $("#item");
-const hideBox = $("#hide-box")
+const hideBox = $("#hide-box");
 btnItem.click(function () {
+    hideBox.is(":hidden");
     const $this = $(this);
     hideBox.slideToggle("slow", function () {
         if(hideBox.is(":hidden")) {
@@ -71,15 +57,7 @@ btnItem.click(function () {
     });
 
 });
-/*
-$("#item").click(function () {
-    if ($("#loadMore").style.display('none'))
-        $("#item p").text("Hide");
-    else
-        console.log("test");
-
-});
-*/
+/*-------------------------------------*/
 
 $('.navbar__item').click(function () {
     const $this = $(this);
@@ -89,16 +67,7 @@ $('.navbar__item').click(function () {
 });
 
 
-/*var root = 'https://jsonplaceholder.typicode.com';
-
-$.ajax({
-    url: root + '/posts/',
-    method: 'GET'
-}).then(function(data) {
-    document.html(data);
-});*/
-
-/*--------------------------------------------------------*/
+/*----------------to show SUBMIT button----------------------------------------*/
 
 $(function () {
     var btn = $("#hide");
@@ -120,8 +89,8 @@ $(document).ready(function () {
     $(".inputField").blur(function () {
         $(this).css("background-color","#273a71");
     });
-})
-/*------------------------------------------------*/
+});
+/*-----------------SCROLL ON TOP button-------------------------------*/
 window.onscroll = function () {scrollFunction()};
 function scrollFunction() {
     if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
@@ -136,3 +105,27 @@ function topFunction() {
 }
 
 /*--------------------------------------------------*/
+
+$(".showButton").click(function() {
+    $("#myNav").css({"width":"100%"})
+});
+
+$(".overlay").click(function () {
+    $("#myNav").css({"width":"0"});
+});
+
+/*-----------------------------------------------------------*/
+
+/*$("body").click(function(){
+    $("#text").fadeToggle(1000,"swing");
+
+});*/
+//$(document).ready(setTimeout(myFunction, 3000));
+
+
+/*----------------------------------*/
+$(document).ready(function(){
+    $(".buttn").mouseover(function(){
+        $(".buttn").animate({left: '250px'});
+    });
+});
