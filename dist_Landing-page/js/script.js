@@ -126,6 +126,95 @@ $(".overlay").click(function () {
 /*----------------------------------*/
 $(document).ready(function(){
     $(".buttn").mouseover(function(){
-        $(".buttn").animate({left: '250px'});
+        $(".buttn").animate({padding: '20px'});
     });
 });
+$(function(){
+    $("div.buttn").fadeOut(1000);
+    $("div.buttn").fadeIn(3000);
+});
+/*----------AJAX------------*/
+/*$(document).ready(function(){
+    $("#button").click(function(){
+        $("#div1").load("https://jsonplaceholder.typicode.com/posts/", function(responseTxt, statusTxt, xhr){
+            if(statusTxt == "success")
+                alert("External content loaded successfully!");
+            if(statusTxt == "error")
+                alert("Error: " + xhr.status + ": " + xhr.statusText);
+        });
+    });
+});*/
+
+const URL = 'http://jsonplaceholder.typicode.com/';
+const users = document.getElementById('users');
+const result = document.getElementById('result');
+
+// http://jsonplaceholder.typicode.com/users
+fetch(URL + 'users')
+    .then(response => response.json())
+    .then(data => {
+        let opt = '<option value="1">Choose client</option>';
+        let resultUsers = '';
+        data.map(item => {
+            opt += `<option value="${item.id}">${item.name}</option>`;
+            resultUsers += `<div class="hide user-info" id="user-${item.id}">
+                 <div class="user-box">
+                     <div class="user-info__item user-info__item_left">
+                         <h3>${item.name}</h3>
+                         <p>${item.email}</p>
+                         <p>Address: ${item.address.city}, ${item.address.street}</p>
+                         <p>phone: ${item.phone}</p>
+                     </div>
+                     <div class="user-info__item user-info__item_right"></div>
+                 </div>
+                  <button data-id="${item.id}" class="get-user-posts">Read posts</button>
+                 <div id="user-posts"></div>
+             </div>`;
+        });
+        users.classList.remove('hide');
+        users.innerHTML = opt;
+        result.innerHTML = resultUsers;
+    });
+
+function hideElements(parent) {
+    [].forEach.call(parent.children,  function(item){
+        item.classList.add('hide');
+    })
+}
+
+function showUser(){
+    const id = 'user-' + this.options[this.selectedIndex].value;
+    hideElements(result);
+    document.getElementById(id).classList.remove('hide');
+}
+
+users.addEventListener('change', showUser, false);
+
+function getUserPosts(e){
+    const target = e.target;
+    if(!target.classList.contains('get-user-posts')) {
+        return false;
+
+    }
+    const id = target.dataset.id;
+    const url = URL + 'posts?userId=' + id;
+    let st = '';
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(item => {
+                st += `<div class="post-item">
+                        <h3 data-id="${item.id}">${item.title}</h3>
+                        <p>${item.body}</p>
+                        <hr>
+                    </div>`;
+            });
+            target.insertAdjacentHTML('afterEnd', st)
+
+        });
+
+
+
+}
+
+result.addEventListener('click', getUserPosts, false);
