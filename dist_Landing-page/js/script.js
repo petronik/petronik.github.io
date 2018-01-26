@@ -134,7 +134,7 @@ $(function(){
     $("div.buttn").fadeIn(3000);
 });
 /*----------AJAX------------*/
-/*$(document).ready(function(){
+$(document).ready(function(){
     $("#button").click(function(){
         $("#div1").load("https://jsonplaceholder.typicode.com/posts/", function(responseTxt, statusTxt, xhr){
             if(statusTxt == "success")
@@ -143,8 +143,9 @@ $(function(){
                 alert("Error: " + xhr.status + ": " + xhr.statusText);
         });
     });
-});*/
+});
 
+/*
 const URL = 'http://jsonplaceholder.typicode.com/';
 const users = document.getElementById('users');
 const result = document.getElementById('result');
@@ -218,3 +219,4 @@ function getUserPosts(e){
 }
 
 result.addEventListener('click', getUserPosts, false);
+*/
