@@ -134,7 +134,7 @@ $(function(){
     $("div.buttn").fadeIn(3000);
 });
 /*----------AJAX------------*/
-$(document).ready(function(){
+/*$(document).ready(function(){
     $("#button").click(function(){
         $("#div1").load("https://jsonplaceholder.typicode.com/posts/", function(responseTxt, statusTxt, xhr){
             if(statusTxt == "success")
@@ -143,14 +143,13 @@ $(document).ready(function(){
                 alert("Error: " + xhr.status + ": " + xhr.statusText);
         });
     });
-});
+});*/
 
-/*
 const URL = 'http://jsonplaceholder.typicode.com/';
 const users = document.getElementById('users');
 const result = document.getElementById('result');
 
-// http://jsonplaceholder.typicode.com/users
+//http://jsonplaceholder.typicode.com/users
 fetch(URL + 'users')
     .then(response => response.json())
     .then(data => {
@@ -163,12 +162,10 @@ fetch(URL + 'users')
                      <div class="user-info__item user-info__item_left">
                          <h3>${item.name}</h3>
                          <p>${item.email}</p>
-                         <p>Address: ${item.address.city}, ${item.address.street}</p>
-                         <p>phone: ${item.phone}</p>
                      </div>
                      <div class="user-info__item user-info__item_right"></div>
                  </div>
-                  <button data-id="${item.id}" class="get-user-posts">Read posts</button>
+                  <button data-id="${item.id}" class="get-user-posts">Read comments</button>
                  <div id="user-posts"></div>
              </div>`;
         });
@@ -219,4 +216,3 @@ function getUserPosts(e){
 }
 
 result.addEventListener('click', getUserPosts, false);
-*/
