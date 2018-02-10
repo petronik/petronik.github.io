@@ -106,7 +106,7 @@ $('button').click(function(){
 
 
 /*-------------Google Map-----------------*/
-function initMap() {
+/*function initMap() {
     var cnt = {lat: 46.478766, lng: 30.723594};
     var map = new
     google.maps.Map(document.getElementById('map'), {
@@ -117,19 +117,19 @@ function initMap() {
     var marker = new google.maps.Marker({
         position: cnt,
         map: map,
-        title: 'Beetroot academy',
-        icon: 'i/favicon.png'
+        title: 'Lizavetta',
+        icon: 'i/pin.png'
     });
 
     const infoWindow = new google.maps.InfoWindow({
-        content: 'Beetroot Academy'
+        content: 'Lizavetta'
     });
 
 
     marker.addListener('click', function(){
         infoWindow.open(map,marker)
     });
-}
+}*/
 
 /*---------------END Google Map-----------------*/
 
@@ -189,12 +189,24 @@ $(document).ready(function () {
     })
 });
 /*------------slickslider--------------------------------*/
+
+$(document).ready(function(){
 $('.videoslider').slick({
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 2
 });
 
+$('#sliderbox').slick({
+    dots:true,
+    appendDots:$('div.sliderbox'),
+    infinite:true,
+    dotsClass:'mydots',
+    //autoplay:true,
+    //autoplaySpeed:2000,
+    slidesToShow:1
+});
+});
 /*-----------overlay YouTube------------------------*/
 $(document).ready(function(){
     $('#overlay').click(function(){
