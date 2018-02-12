@@ -204,12 +204,90 @@ $('#sliderbox').slick({
     dotsClass:'mydots',
     //autoplay:true,
     //autoplaySpeed:2000,
-    slidesToShow:1
+    slidesToShow: 1
 });
+
+
+
+   /* $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.modal-content',
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
+    });
+*/
+
+/*$('#openmodal').slick({
+    asNavFor:'#album1',
+    dots:false,
+    arrows:false
+});*/
+
+$('#album1').slick({
+    slidesToShow: 2
+    //slidesToScroll:2
+
 });
+
+});
+
+
+/*$('.subAlbum1').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.subAlbum1',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true
+});*/
+
+
+
 /*-----------overlay YouTube------------------------*/
 $(document).ready(function(){
     $('#overlay').click(function(){
         $('#overlay').toggle();
     })
 });
+
+
+$(function(){
+    $('.open-modal').click(function(){
+        const modal = $('.modal');
+
+        modal.addClass('is-active')
+            .find('button.modal-close')
+            .click(function(){
+                modal.removeClass('is-active');
+            });
+    });
+
+});
+
+/*const rotateBtn = $('.mydropdown :before');
+$("#navbarDropdown").click(function(){
+    rotateBtn.css({
+        'transform':'rotate(' + 180 + 'deg)'});
+    console.log(this);
+});*/
+/*
+var rotation = 0;
+
+jQuery.fn.rotate = function(degrees) {
+    $(this).css({'transform' : 'rotate('+ degrees +'deg)'});
+    return $(this);
+};
+
+$('#navbarDropdown').click(function() {
+    rotation += 5;
+    $(this).rotate(rotation);
+});*/
