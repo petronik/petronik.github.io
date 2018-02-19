@@ -612,15 +612,6 @@ header {
 }
 
 .mydots li.slick-active {
-  /*
-position: relative;
-  content:'';
-  width: 11px;
-  height: 11px;
-  left:4px;
-  top: 3px;
-  border: 1px solid #8a7861;
-*/
   background: #eabcbe;
 }
 
@@ -692,7 +683,6 @@ footer {
   background: #f8f7f3;
   max-width: 1200px;
   margin: 0 auto;
-  padding-bottom: 8rem;
 }
 
 .photogallery {
@@ -732,6 +722,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .video {
+    width: 250px;
+    height: 200px;
+  }
   .photogallery__albums {
     padding: 0 10px;
   }
@@ -1067,7 +1061,7 @@ footer {
     text-indent: 15px;
     margin: 20px 0;
   }
-  iframe {
+  .gmaps {
     display: none;
   }
 }
@@ -1136,8 +1130,6 @@ footer {
   background-position: right center;
   font-size: 0.9375rem;
   margin-top: 40px;
-  /*padding-bottom: 20px;*/
-  font-weight: 400;
   padding: 0 10px;
 }
 
@@ -1148,10 +1140,6 @@ footer {
   margin: 40px 0;
 }
 
-/*
-h2 .title{
-  font-family: 'HeinrichScript', sans-serif;
-}*/
 @media screen and (min-width: 768px) {
   .service {
     font-size: 1.25rem;
@@ -1159,7 +1147,7 @@ h2 .title{
   .service h2.title {
     text-align: center;
     font-family: 'HeinrichScript', sans-serif;
-    font-size: 1.25rem;
+    font-size: 2.5rem;
     margin: 40px 0;
   }
 }
