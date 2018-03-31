@@ -22,24 +22,11 @@ toggleMenu.click(function(){
         });
     }
 });
-
 function initMobile() {
-    let reMenu = $('#hdr-btm');
-    let item1 = $('#item1');
-    let hdrTop = $('.header-top')
-    let span = $('<p> Catalog</p><span class="icon-chevron-right"></span>')
-    let span1 = $('<span class="icon-chevron-right"></span>')
     $('body').addClass('is-mobile').removeClass('is-descktop');
-    navMenu.append(reMenu);
-    reMenu.before(item1);
-    hdrTop.after(navMenu);
-    $('.icon-menu').remove();
-    $('#shop').append(span)
-    $('#page').append(span1)
-
-
     console.log("is-mobile");
 }
+
 function initDesktop() {
     $('body').addClass('is-desktop').removeClass('is-mobile');
     toggleMenu.removeClass('active');
@@ -61,4 +48,12 @@ ssm.addState({
     onEnter: function(){
         initDesktop();
     }
+});
+
+
+$(document).ready(function(){
+
+    $("#item1").click(function(){
+        $("#dropdownlist").fadeToggle();
+    });
 });
