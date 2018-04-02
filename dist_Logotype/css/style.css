@@ -1459,23 +1459,14 @@ html {
 }
 
 h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-  position: absolute;
-  top: 200px;
-  left: 30%;
   font-size: 4.375rem;
   font-weight: 900;
   color: #e5e5e5;
-  margin: 0 auto;
-  z-index: 0;
+  margin: 100px 25%;
+  text-align: center;
 }
 
 .container {
-  height: 100vh;
   font-family: "Rubik", sans-serif;
   font-size: 0.75rem;
   margin: 10px 0;
@@ -1948,6 +1939,9 @@ span.cartCount {
   #dropdownlist {
     position: static;
   }
+  h1 {
+    font-size: 2.5rem;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -1963,8 +1957,5 @@ span.cartCount {
   }
   #shop span {
     display: none;
-  }
-  h1 {
-    left: 40%;
   }
 }
