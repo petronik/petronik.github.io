@@ -4,82 +4,112 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css">
     <title>Hello, world!</title>
 </head>
 <body>
+<div  id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <form id="formbox" class="formbox" action="">
+        <input type="text" name="firstName" placeholder="First Name">
+        <input type="text" name="lastName" placeholder="Last Name">
+        <textarea name="textarea" id="myText" cols="30" rows="2" placeholder="Your Request"></textarea>
+        <button class="button" type="submit">submit</button>
+    </form>
+</div>
 <div class="container-fluid">
 
     <div class="container-top">
         <div class="container-top__header">
             <h1>our process</h1>
         </div>
+
         <div class="container-top__media">
-            <button class="btn">&#8593;</button>
-            <a href="#"><i class="far fa-envelope"></i></a>
-            <a href="https://www.behance.net/nextpage_ua" target="_blank"><i class="fab fa-behance"></i></a>
-            <a href="https://www.instagram.com/nextpageua/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/nextpage.od" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        </div>
+            <div class="span" id="span">&#8595;</div>
+            <div id="media" class="container-top__media_item">
+                <a href="#" class="myBtn" id="myBtn"><i class="far fa-envelope"></i></a>
+                <a href="https://www.behance.net/nextpage_ua" target="_blank"><i class="fab fa-behance"></i></a>
+                <a href="https://www.instagram.com/nextpageua/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/nextpage.od" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            </div>
 
         <div  id="slider-box" class="slider-box">
-           <!-- <a class="prev" onclick="plusSlides(-1)">previous process <span>&#8593;</span></a>
-            <a class="next" onclick="plusSlides(1)">next process <span>&#8595;</span></a>-->
-             <div class="slider-box__slider">
 
-                 <img src="i/glasses.png" alt="Glasses">
-                 <h2>Active Process</h2>
-                 <h3>Red and rounded</h3>
+             <div class="slider-box__slider">
+                 <div class="slider-box__slider_item">
+                 <figure><img src="i/glasses.png" alt="Glasses"></figure>
+                     <div class="item-title">
+                         <h2>Active Process</h2>
+                         <h3>Red and rounded</h3>
+                     </div>
+                 </div>
 
                  <p class="text" >Birds (Aves) are a group of endothermic vertebrates, characterised by feathers,
                      toothless beaked jaws, laying of hard-shelled eggs, a high metabolic rate,
                      a four-chambered heart. of hard-shelled eggs, a high metabolic rate,
                      a four-chambered heart.</p>
              </div>
-             <div class="slider-box__slider">
+            <div class="slider-box__slider">
+                <div class="slider-box__slider_item">
+                    <figure><img src="i/glasses.png" alt="Glasses"></figure>
+                    <div class="item-title">
+                        <h2>Active Process</h2>
+                        <h3>Red and rounded</h3>
+                    </div>
+                </div>
 
-                 <img src="i/glasses.png" alt="Glasses">
-                 <h2>Active Process</h2>
-                 <h3>Red and rounded</h3>
+                <p class="text" >Birds (Aves) are a group of endothermic vertebrates, characterised by feathers,
+                    toothless beaked jaws, laying of hard-shelled eggs, a high metabolic rate,
+                    a four-chambered heart. of hard-shelled eggs, a high metabolic rate,
+                    a four-chambered heart.</p>
+            </div>
+            <div class="slider-box__slider">
+                <div class="slider-box__slider_item">
+                    <figure><img src="i/glasses.png" alt="Glasses"></figure>
+                    <div class="item-title">
+                        <h2>Active Process</h2>
+                        <h3>Red and rounded</h3>
+                    </div>
+                </div>
 
-                 <p class="text" >Birds (Aves) are a group of endothermic vertebrates, characterised by feathers,
-                     toothless beaked jaws, laying of hard-shelled eggs, a high metabolic rate,
-                     a four-chambered heart. of hard-shelled eggs, a high metabolic rate,
-                     a four-chambered heart.</p>
-             </div>
-             <div class="slider-box__slider">
+                <p class="text" >Birds (Aves) are a group of endothermic vertebrates, characterised by feathers,
+                    toothless beaked jaws, laying of hard-shelled eggs, a high metabolic rate,
+                    a four-chambered heart. of hard-shelled eggs, a high metabolic rate,
+                    a four-chambered heart.</p>
+            </div>
+            <div class="slider-box__slider">
+                <div class="slider-box__slider_item">
+                    <figure><img src="i/glasses.png" alt="Glasses"></figure>
+                    <div class="item-title">
+                        <h2>Active Process</h2>
+                        <h3>Red and rounded</h3>
+                    </div>
+                </div>
 
-                 <img src="i/glasses.png" alt="Glasses">
-                 <h2>Active Process</h2>
-                 <h3>Red and rounded</h3>
+                <p class="text" >Birds (Aves) are a group of endothermic vertebrates, characterised by feathers,
+                    toothless beaked jaws, laying of hard-shelled eggs, a high metabolic rate,
+                    a four-chambered heart. of hard-shelled eggs, a high metabolic rate,
+                    a four-chambered heart.</p>
+            </div>
+            <div class="slider-box__slider">
+                <div class="slider-box__slider_item">
+                    <figure><img src="i/glasses.png" alt="Glasses"></figure>
+                    <div class="item-title">
+                        <h2>Active Process</h2>
+                        <h3>Red and rounded</h3>
+                    </div>
+                </div>
 
-                 <p class="text" >Birds (Aves) are a group of endothermic vertebrates, characterised by feathers,
-                     toothless beaked jaws, laying of hard-shelled eggs, a high metabolic rate,
-                     a four-chambered heart. of hard-shelled eggs, a high metabolic rate,
-                     a four-chambered heart.</p>
-             </div>
-             <div class="slider-box__slider">
+                <p class="text" >Birds (Aves) are a group of endothermic vertebrates, characterised by feathers,
+                    toothless beaked jaws, laying of hard-shelled eggs, a high metabolic rate,
+                    a four-chambered heart. of hard-shelled eggs, a high metabolic rate,
+                    a four-chambered heart.</p>
+            </div>
 
-                 <img src="i/glasses.png" alt="Glasses">
-                 <h2>Active Process</h2>
-                 <h3>Red and rounded</h3>
 
-                 <p class="text" >Birds (Aves) are a group of endothermic vertebrates, characterised by feathers,
-                     toothless beaked jaws, laying of hard-shelled eggs, a high metabolic rate,
-                     a four-chambered heart. of hard-shelled eggs, a high metabolic rate,
-                     a four-chambered heart.</p>
-             </div>
-             <div class="slider-box__slider">
-
-                 <img src="i/glasses.png" alt="Glasses">
-                 <h2>Active Process</h2>
-                 <h3>Red and rounded</h3>
-
-                 <p class="text" >Birds (Aves) are a group of endothermic vertebrates, characterised by feathers,
-                     toothless beaked jaws, laying of hard-shelled eggs, a high metabolic rate,
-                     a four-chambered heart. of hard-shelled eggs, a high metabolic rate,
-                     a four-chambered heart.</p>
-             </div>
 
         </div>
         <!--<div class="container-top__page">
@@ -106,7 +136,8 @@
             <h2>Want to know more about our services?<br>
                 Interested in started a project?
             </h2>
-            <div class="button">Let's talk</div>
+            <div id="myBtn1" class="button">Let's talk</div>
+
         </div>
         <footer class="footer">
             <div class="footer__copyright">
@@ -131,10 +162,14 @@
 
 </div>
 
-<script
+<!--<script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 <script src="js/script.js"></script>
 
 </body>

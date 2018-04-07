@@ -13,3 +13,36 @@ $(document).ready(function(){
         appendDots:$('.slider-box')
     })
 })
+
+$('#media').hide();
+//$('#span').toggle('#media');
+$(document).ready(function(){
+    $("#span").click(function(){
+        $("#media").toggle();
+    });
+
+});
+const modal = document.getElementById('myModal');
+
+
+const btn = document.getElementById("myBtn");
+const btn1 = document.getElementById("myBtn1");
+
+const span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.style.display = "flex";
+};
+btn1.onclick = function() {
+    modal.style.display = "flex";
+};
+
+span.onclick = function() {
+    modal.style.display = "none";
+};
+
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
