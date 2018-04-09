@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Rubik:400,700,900);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Rubik:400,500,700,900);@charset "UTF-8";
 html,
 body,
 p,
@@ -820,7 +820,7 @@ img {
     top: 0;
   }
   .container-top__header h1 {
-    font-size: 100px;
+    font-size: 4.4375rem;
     width: 50%;
     z-index: 1;
   }
@@ -884,6 +884,44 @@ img {
   }
   .container-top__media button {
     border-bottom: solid 2px #edecec;
+  }
+  .container-top__model h2 {
+    margin-left: 6%;
+    padding-bottom: 28px;
+    font-size: 1rem;
+  }
+  .container-top__model_content {
+    border: solid 1px #c6c5c5;
+    margin: auto;
+    width: 60%;
+    max-height: 200px;
+    margin-left: 26.5%;
+    margin-right: 12.5%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+  .container-top__model_content .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-left: 6%;
+    font-size: 2.25rem;
+    font-weight: 500;
+  }
+  .container-top__model_content .title button {
+    margin-top: 0;
+    font-size: 0.625rem;
+    font-weight: 500;
+  }
+  .container-top__model_content .title button::after {
+    width: 90%;
   }
   .span {
     width: 65px;
@@ -1096,7 +1134,6 @@ img {
     width: 30%;
   }
   .container-top__header h1 {
-    font-size: 9.375rem;
-    margin: 0;
+    font-size: 12rem;
   }
 }
