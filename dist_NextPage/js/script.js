@@ -14,7 +14,7 @@ $(document).ready(function(){
     })
 })
 
-$('#media').hide();
+//$('#media').hide();
 //$('#span').toggle('#media');
 $(document).ready(function(){
     $("#span").click(function(){
