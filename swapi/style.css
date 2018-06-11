@@ -1,0 +1,34 @@
+body {
+    color: yellow;
+}
+.header {
+    text-align: center;
+    border: 2px double red;
+    background-color: black;
+    color: yellow;
+
+}
+.header__top{
+    font-size: 50px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+    border: 2px double red;
+    background-color: black;
+    min-height: 100vh;
+    margin-top: 10px;
+
+}
+.right{
+    width:49%;
+}
+.hide{
+    display:none;
+}
+.show{
+    display: block;
+}
