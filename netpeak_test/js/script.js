@@ -4,7 +4,8 @@
 $('.menu-btn').on('click', function(e){
     e.preventDefault();
     $(this).toggleClass('menu-btn_active');
-    $('.nav-link').toggleClass('nav-link_active');
+    /*$('.nav-link').toggleClass('nav-link_active');*/
+    $('.toggle-menu').toggleClass('toggle-menu_active')
 });
 $('a').hover(function(){
     $(this).css("transition", "0.5s");
