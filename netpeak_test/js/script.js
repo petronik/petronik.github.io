@@ -23,3 +23,12 @@ $('.btn1').mouseenter(function () {
 $('.container-3__item_box').on('click', function(){
     $('.item1').toggleClass('item1-origin');
 });
+$('h2').each(function(){
+    let pdata = $(this);
+    pdata.html( pdata.text().replace(/(\w+)/,'<b>$1</b>') );
+});
+$(window).scroll(function (){
+   if($(document).scrollTop() === 100){
+       $('button').hide()
+   }else{$('button').show()}
+});

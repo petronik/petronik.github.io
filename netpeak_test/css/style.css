@@ -110,20 +110,6 @@ body {
   position: relative;
 }
 
-/*.btn1:before{
-    //content: attr(data-text);
-    position:absolute;
-
-  //margin:0 -10px;
-    background:linear-gradient(90deg, #d630f2, #ff002f, #e4ff00, #03a9f4, #d630f2);
-    background-size:300%;
-    overflow:hidden;
-    transition:width 2s;
-    animation: animate 5s linear infinite;
-    width:0;
-    -webkit-background-clip: border;
-
-  }*/
 .btn1:hover {
   background: -webkit-gradient(linear, left top, right top, from(#ff8e64), to(#ffe641));
   background: linear-gradient(to right, #ff8e64, #ffe641);
@@ -648,6 +634,7 @@ footer .footer .media a:last-child {
   .container-3__item_box .icon-box {
     width: 50px;
     height: 50px;
+    margin: 0 auto;
   }
   .container-3__item_box .box_content {
     text-align: left;
@@ -852,7 +839,7 @@ footer .footer .media a:last-child {
   background: url(../i/Background.png) no-repeat;
 }
 
-.mailbox h1 {
+.mailbox h2 {
   font-size: 2vw;
 }
 
