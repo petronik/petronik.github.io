@@ -11,7 +11,7 @@ export class PaymentDetailService {
   constructor(private http:HttpClient) { }
 
 formData:PaymentDetail = new PaymentDetail();
-readonly baseUrl:"https://localhost:44374/api/PaymentDetails"
+readonly baseUrl:'https://localhost:44374/api/PaymentDetails'
 
 postPaymentDetail(){
   return this.http.post(this.baseUrl, this.formData)
