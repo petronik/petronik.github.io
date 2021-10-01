@@ -1,5 +1,5 @@
 
-const URL = 'https://swapi.co/api/';
+const URL = 'https://swapi.dev/api/';
 const filmList = document.getElementById('filmList');
 const result = document.getElementById('result');
 
