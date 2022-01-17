@@ -131,7 +131,7 @@ function t11(event) {
   console.log(event);
   let  tList = event.targetTouches 
   for(let item of tList){
-    document.querySelector('.out-11').innerHTML = ` ${item.radiusX} ${item.radiusY} <br>`;
+    document.querySelector('.out-11').innerHTML += ` ${item.radiusX} ${item.radiusY} <br>`;
   }
 }
 
