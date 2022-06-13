@@ -128,7 +128,7 @@ div10.ontouchmove = t10;
 /*  Дан блок div-11. Добавьте на него событие touch. При срабатывании выводите радиус события radiusX, radiusY. */
 
 function t11(event) {
-  console.log(event);
+  console.log(event.targetTouches);
   let  tList = event.targetTouches 
   for(let item of tList){
     document.querySelector('.out-11').innerHTML += ` ${item.radiusX} ${item.radiusY} <br>`;
